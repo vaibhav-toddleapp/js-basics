@@ -36,9 +36,11 @@ console.log(greet());
 
 // console.log(factorial(5)); // Output: 120
 
-// // 5. Function Rest Parameters
+// 5. Function Rest Parameters
 // function sum(...args) {
-//   return args.reduce((a, b) => a + b);
+//   let total = 0;
+//   args.forEach((value) => (total = total + value));
+//   return total;
 // }
 
 // console.log(sum(1, 2, 3, 4)); // Output: 10
