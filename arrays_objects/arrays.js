@@ -35,50 +35,50 @@ console.log(cars[1]); // { type: 'Saab', year: 2001 }
 console.log(cars[2]); // { type: 'BMW', year: 2010 }
 
 // You can also change an array element by accessing the index number: add new car object
-cars[0] = "Toyota";
-console.log(cars[0]); // Toyota
+// cars[0] = "Toyota";
+// console.log(cars[0]); // Toyota
 
-// The length property provides an easy way to append a new element to an array:
-cars[cars.length] = "Mercedes";
-console.log(cars[3]); // Mercedes
+// // The length property provides an easy way to append a new element to an array:
+// cars[cars.length] = "Mercedes";
+// console.log(cars[3]); // Mercedes
 
-// Difference between shallow and deep copy of an array
-// Shallow copy
-var shallowCopy = cars;
-shallowCopy[0] = "Audi";
-console.log(cars[0], shallowCopy[0]); // Audi, Audi
+// // Difference between shallow and deep copy of an array
+// // Shallow copy
+// var shallowCopy = cars;
+// shallowCopy[0] = "Audi";
+// console.log(cars[0], shallowCopy[0]); // Audi, Audi
 
-// Deep copy
-var deepCopy = [...cars];
-deepCopy[0] = "Tesla";
-console.log(cars[0], deepCopy[0]); // Audi, Tesla
+// // Deep copy
+// var deepCopy = [...cars];
+// deepCopy[0] = "Tesla";
+// console.log(cars[0], deepCopy[0]); // Audi, Tesla
 
-// Array Methods
+// // Array Methods
 
-// 1. push()
-// The push() method adds new items to the "end" of an array, and returns the new length.
-var fruits = ["Banana", "Orange", "Apple"];
-fruits.push("Mango");
-console.log(fruits); // ["Banana", "Orange", "Apple", "Mango"]
+// // 1. push()
+// // The push() method adds new items to the "end" of an array, and returns the new length.
+// var fruits = ["Banana", "Orange", "Apple"];
+// fruits.push("Mango");
+// console.log(fruits); // ["Banana", "Orange", "Apple", "Mango"]
 
-// 2. pop()
-// The pop() method removes the "last element" from an array, and returns that element.
-var fruits = ["Banana", "Orange", "Apple"];
-fruits.pop();
-console.log(fruits); // ["Banana", "Orange"]
+// // 2. pop()
+// // The pop() method removes the "last element" from an array, and returns that element.
+// var fruits = ["Banana", "Orange", "Apple"];
+// fruits.pop();
+// console.log(fruits); // ["Banana", "Orange"]
 
-// You can use shift() and unshift() methods to add and remove elements from the "beginning" of an array.
+// // You can use shift() and unshift() methods to add and remove elements from the "beginning" of an array.
 
-// 3. map()
-// The map() method creates a new array by performing a function on each array element.
-var numbers = [4, 9, 16, 25];
-var x = numbers.map((number, index) => {
-  console.log("Value at:" + index, number);
-});
+// // 3. map()
+// // The map() method creates a new array by performing a function on each array element.
+// var numbers = [4, 9, 16, 25];
+// var x = numbers.map((number, index) => {
+//   console.log("Value at:" + index, number);
+// });
 
-// 4. filter()
-// The filter() method creates a new array with array elements that pass a test.
-var numbers = [4, 9, 16, 25];
-var filtered = numbers.filter((number) => number % 2 === 0);
+// // 4. filter()
+// // The filter() method creates a new array with array elements that pass a test.
+// var numbers = [4, 9, 16, 25];
+// var filtered = numbers.filter((number) => number % 2 === 0);
 
 // Also refer: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array for more methods
