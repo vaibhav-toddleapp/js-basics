@@ -8,7 +8,8 @@
 // var car2 = "Volvo";
 // var car3 = "BMW";
 
-// However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+// However, what if you want to go through all the cars and find a specific one? 
+// And what if you had not 3 cars, but 300?
 // The solution is an array!
 
 // An array can hold many values under a single name, and you can access the values by referring to an index number.
@@ -37,6 +38,9 @@ console.log(cars[2]); // { type: 'BMW', year: 2010 }
 // You can also change an array element by accessing the index number: add new car object
 // cars[0] = "Toyota";
 // console.log(cars[0]); // Toyota
+
+// You can get total number of elements using length property
+
 
 // // The length property provides an easy way to append a new element to an array:
 // cars[cars.length] = "Mercedes";
@@ -80,5 +84,23 @@ console.log(cars[2]); // { type: 'BMW', year: 2010 }
 // // The filter() method creates a new array with array elements that pass a test.
 // var numbers = [4, 9, 16, 25];
 // var filtered = numbers.filter((number) => number % 2 === 0);
+
+// // 5. indexOf()
+// // The indexOf() method searches the array for the specified item, and returns its position.
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// var pos = fruits.indexOf("Apple");
+// console.log(pos);
+
+// // 6. find()
+// // The find() method returns the value of the first element in the provided array that satisfies the provided testing function.
+// var numbers = [4, 9, 16, 25];
+// var found = numbers.find((number) => number > 10);
+
+
+// // 7. slice()
+// // The slice() method slices out a piece of an array into a new array.
+// var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// var citrus = fruits.slice(1, 3);
+// console.log(citrus);
 
 // Also refer: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array for more methods
