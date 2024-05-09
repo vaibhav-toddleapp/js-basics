@@ -36,29 +36,25 @@ console.log(greet());
 
 // console.log(factorial(5)); // Output: 120
 
-// 5. Function Rest Parameters
-// function sum(...args) {
-//   let total = 0;
-//   args.forEach((value) => (total = total + value));
-//   return total;
-// }
-
-// console.log(sum(1, 2, 3, 4)); // Output: 10
-
 // // 6. Function Default Parameters
 // function multiply(a, b = 2) {
 //   return a * b;
 // }
 
 // console.log(multiply(5)); // Output: 10
+// console.log(multiply(5, undefined)); 
 
-// // 7. Function Destructuring Parameters
+// // 7. Function Destructuring Parameters, // good-practice
 // function printUserId({ id }) {
 //   console.log(id);
 // }
 
 // const user = { id: 42, name: "John" };
 // printUserId(user); // Output: 42
+
+// -------------------------------------------------------------
+// -------------------------------------------------------------
+// -------------------------------------------------------------
 
 // // 8. Function Callbacks
 // function greeting(name) {
@@ -72,13 +68,9 @@ console.log(greet());
 
 // processUserInput(greeting);
 
-// 9. Function Scope
+// //  Array filter()
+// const words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
 
-// What will be the output of the following code?
-// var a = 10;
-// function myFunction() {
-//   var a = 1;
-//   console.log(a);
-// }
-
-// console.log(a);
+// const result = words.filter(function (word) {
+//   return word.length > 6;
+// });

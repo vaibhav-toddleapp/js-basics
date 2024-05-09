@@ -25,45 +25,63 @@
 // ];
 
 var cars = [
-  { type: "Volvo", year: 2016 },
+  { type: "Volvo", year: 2016, color: "red"},
   { type: "Saab", year: 2001 },
-  { type: "BMW", year: 2010 },
+  { type: "BMW", year: 2010, model: "X5" },
+  { type: "Audi", year: 2018 }
 ];
 
 // You can access the array items by referring to the index number:
-console.log(cars[0]); // { type: 'Volvo', year: 2016 }
-console.log(cars[1]); // { type: 'Saab', year: 2001 }
-console.log(cars[2]); // { type: 'BMW', year: 2010 }
+// console.log(cars[0]); // { type: 'Volvo', year: 2016 }
+// console.log(cars[1]); // { type: 'Saab', year: 2001 }
+// console.log(cars[2]); // { type: 'BMW', year: 2010 }
 
 // You can also change an array element by accessing the index number: add new car object
-// cars[0] = "Toyota";
-// console.log(cars[0]); // Toyota
 
 // You can get total number of elements using length property
+//console.log(cars.length);
 
+// You can loop through the array elements using for loop
+for(var i = 0; i < cars.length; i = i + 1) {
+  // Object.keys(cars[i]) => ["type", "color", "year"]
+
+}
+const object1 = {
+  "firstName":"sumit",
+  "lastName":"ghosh",
+  "website":"geeksforgeeks"
+};
 
 // // The length property provides an easy way to append a new element to an array:
-// cars[cars.length] = "Mercedes";
-// console.log(cars[3]); // Mercedes
+cars[cars.length] = "Mercedes";
+console.log(cars[3]); // Mercedes
 
 // // Difference between shallow and deep copy of an array
 // // Shallow copy
+// console.log("BEFORE:", cars[0]);
 // var shallowCopy = cars;
 // shallowCopy[0] = "Audi";
-// console.log(cars[0], shallowCopy[0]); // Audi, Audi
+// console.log("AFter:",cars[0], shallowCopy[0]); // Audi, Audi
 
 // // Deep copy
 // var deepCopy = [...cars];
 // deepCopy[0] = "Tesla";
 // console.log(cars[0], deepCopy[0]); // Audi, Tesla
 
+var deepper = [{type: "Tesla", year: 2020}, ...cars, {type: "Ford", year: 2019}];
+
+const manyDeep = [...cars, ...deepper]; // 
+console.log(manyDeep);
+
+cars[cars.length + 5] = "data";
+
 // // Array Methods
 
-// // 1. push()
-// // The push() method adds new items to the "end" of an array, and returns the new length.
-// var fruits = ["Banana", "Orange", "Apple"];
-// fruits.push("Mango");
-// console.log(fruits); // ["Banana", "Orange", "Apple", "Mango"]
+// 1. push()
+// The push() method adds new items to the "end" of an array, and returns the new length.
+var fruits = ["Banana", "Orange", "Apple"];
+fruits.unshift("Mango");
+console.log(fruits); // ["Banana", "Orange", "Apple", "Mango"]
 
 // // 2. pop()
 // // The pop() method removes the "last element" from an array, and returns that element.
@@ -75,15 +93,22 @@ console.log(cars[2]); // { type: 'BMW', year: 2010 }
 
 // // 3. map()
 // // The map() method creates a new array by performing a function on each array element.
-// var numbers = [4, 9, 16, 25];
-// var x = numbers.map((number, index) => {
-//   console.log("Value at:" + index, number);
-// });
+// var numbers = [4, 9, 16, 25, 10];
 
+// const functionToProcess = (car, index) => {
+//   return;
+// };
+
+// var x = numbers.map(functionToProcess);
+
+console.log("NEW ARRAY:", x, "OLD ARRAY:", numbers);
 // // 4. filter()
 // // The filter() method creates a new array with array elements that pass a test.
 // var numbers = [4, 9, 16, 25];
-// var filtered = numbers.filter((number) => number % 2 === 0);
+// var filtered = numbers.filter((number) => {
+//   if(number > 10) return true;
+//   else return false;
+// });
 
 // // 5. indexOf()
 // // The indexOf() method searches the array for the specified item, and returns its position.
